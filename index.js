@@ -1,5 +1,5 @@
 import Books from './modules/Books.js';
-//import date from './modules/Date.js'
+import date from './modules/Date.js';
 
 const booksCnt = document.getElementById('booksCnt');
 const frmAddBook = document.getElementById('frmAddBook');
@@ -29,6 +29,5 @@ frmAddBook.addEventListener('submit', (e) => {
 });
 
 window.onload = () => {
-    date();
-  };
-
+  date();
+};

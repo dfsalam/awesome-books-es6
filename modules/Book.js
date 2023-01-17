@@ -9,7 +9,7 @@ export default class Book {
     this.id = id;
   }
 
-  createHtml () {
+  createHtml() {
     const book = document.createElement('div');
     book.className = 'book';
     book.innerHTML = `

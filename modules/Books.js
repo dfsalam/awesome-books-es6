@@ -7,17 +7,17 @@ export default class Books {
     this.paragraph = document.getElementById('list-p');
     if (this.amount > 0) {
       this.load();
-    }else{
+    } else {
       this.noBooks();
     }
   }
 
-  noBooks() {    
-    if (this.amount===0){     
+  noBooks() {
+    if (this.amount === 0) {
       this.paragraph.classList.remove('d-none');
-      return;      
+      return;
     }
-    this.paragraph.classList.add('d-none');    
+    this.paragraph.classList.add('d-none');
   }
 
   load() {
@@ -41,7 +41,7 @@ export default class Books {
     button.parentElement.remove();
     this.saveLocally();
     //
-    this.noBooks();    
+    this.noBooks();
   }
 
   add(title, author) {
@@ -49,7 +49,7 @@ export default class Books {
     this.books.push(book);
     this.container.appendChild(this.create(book));
     this.saveLocally();
-    this.noBooks();    
+    this.noBooks();
   }
 
   create(book) {
