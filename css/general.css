@@ -29,7 +29,7 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   width: 1px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
