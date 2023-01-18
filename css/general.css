@@ -1,0 +1,48 @@
+.d-none {
+  display: none;
+}
+
+.center {
+  max-width: 500px;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.button--shadow {
+  padding: 0 0.6rem;
+  background: white;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 0 black;
+}
+
+.button--shadow:active {
+  transform: scale(0.9);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.page {
+  display: none;
+}
+
+.page[open] {
+  display: block;
+}
