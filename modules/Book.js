@@ -9,7 +9,7 @@ export default class Book {
     this.id = id;
   }
 
-  createHtml() {
+  createHtml = () => {
     const book = document.createElement('div');
     book.className = 'book';
     book.innerHTML = `
@@ -19,7 +19,7 @@ export default class Book {
     return book;
   }
 
-  createId(tokenLen = 16) {
+  createId = (tokenLen = 16) => {
     let id = '';
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     for (let i = 0; i < tokenLen; i += 1) {

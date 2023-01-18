@@ -12,7 +12,7 @@ export default class Books {
     }
   }
 
-  noBooks() {
+  noBooks = () => {
     if (this.amount === 0) {
       this.paragraph.classList.remove('d-none');
       return;
@@ -20,7 +20,7 @@ export default class Books {
     this.paragraph.classList.add('d-none');
   }
 
-  load() {
+  load = () => {
     const instances = [];
     const fragment = document.createDocumentFragment();
     this.books.forEach(({ title, author, id }) => {
@@ -32,11 +32,11 @@ export default class Books {
     this.books = instances;
   }
 
-  saveLocally() {
+  saveLocally = () => {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
-  remove(button) {
+  remove = (button) => {
     this.books = this.books.filter((book) => book.id !== button.id);
     button.parentElement.remove();
     this.saveLocally();
@@ -44,7 +44,7 @@ export default class Books {
     this.noBooks();
   }
 
-  add(title, author) {
+  add = (title, author) => {
     const book = new Book(title, author);
     this.books.push(book);
     this.container.appendChild(this.create(book));
@@ -52,7 +52,7 @@ export default class Books {
     this.noBooks();
   }
 
-  create(book) {
+  create = (book) => {
     const html = book.createHtml(this.remove);
     const btn = html.querySelector('button');
     btn.addEventListener('click', ({ target }) => {
